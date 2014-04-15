@@ -1,0 +1,20 @@
+.post_page 
+  %h1 Цікаві статті
+  - if user_signed_in? && current_user.first_name == 'admin'
+    .interesting-button
+      = link_to 'Нова стаття', new_post_path
+ 
+  .posts
+    - @posts.each do |post|
+      .post
+        %h2= post.title
+        %p= raw post.description
+        - post.images.each do |image|
+          = image_tag image.avatar.url(:medium)
+        %span.button
+          = link_to 'Переглянути', post
+        - if user_signed_in?
+          - if current_user.first_name = 'admin'
+            %span
+              = link_to 'Редагувати', edit_post_path(post)
+            = link_to 'Видалити', post, :method => :delete, :data => { :confirm => 'Are you sure?' }

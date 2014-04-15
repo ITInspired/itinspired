@@ -1,0 +1,28 @@
+.homes_page
+  .row-fluid
+    .span12
+      .row-fluid
+        .span4.offset1
+          .row-fluid
+            .span8.right.button_one
+              %a{:href => "/posts"} НОВИНИ 
+            .span8.right.button_two
+              %a{:href => "/events"} ПОДІЇ 
+            .span8.right.button_three
+              %a{:href => "/interesting"} ЦІКАВІ СТАТТІ
+        .span2.text-center.margin.logo
+          %a{:href => ""} 
+            %img{:src => "images/logo.png", :alt => ""}/ 
+        .span4
+          .row-fluid
+            .span8.button_four
+              %a{:href => "/step1"} НАВЧАННЯ
+            .span8.button_five.margin
+              %a{:href => "/about"} ПРО НАС
+            .span8.button_six.margin        
+              
+              = link_to 'http://vk.com/ifits' do
+                МИ
+                %span.vk-img
+                  =image_tag 'vk.png'
+

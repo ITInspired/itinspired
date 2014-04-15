@@ -1,0 +1,21 @@
+.events_page
+  %h1 Події
+  - if user_signed_in? && current_user.first_name == 'admin'
+    .event-button
+      = link_to 'Нова подія', new_event_path
+    
+  .events
+    - @events.each do |event|
+      .event
+        %h2= event.title
+        %p= raw event.description
+        - event.images.each do |image|
+          = image_tag image.avatar.url(:medium)
+        %span.button
+          = link_to 'Переглянути', event
+        - if user_signed_in?
+          - if current_user.first_name = 'admin'
+            %span
+              = link_to 'Редагувати', edit_event_path(event)
+            = link_to 'Видалити', event, :method => :delete, :data => { :confirm => 'Are you sure?' }
+

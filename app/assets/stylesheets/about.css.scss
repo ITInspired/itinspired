@@ -1,0 +1,66 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+.clearfix {
+  clear: both;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+.page_about{
+	margin-left: 300px;
+}
+.page_about_content{
+	font-size: 16px;
+	color: #686868;
+	margin-right: 20px;
+	margin-top: 30px;
+}
+.work ul li{
+		font-size: 17px;
+		font-style: italic;
+		color: #686868;
+}
+h3{
+	color: #017ac3;
+  font-size: 24px;
+}
+.list_style ul li{
+	list-style: square;
+}
+.mail a{
+	text-decoration: none;
+}
+.page_step1{
+	margin-left: 300px;
+}
+.page_step2{
+	margin-left: 300px;
+}
+.page_step3{
+	margin-left: 300px;
+}
+.page_step1 input[type="submit"]{
+	width: 200px;
+	height: 60px;
+	background-color: #308bf5;
+	outline: none;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	margin: 10px 5px 20px 40px;
+}
+.page_step2 input[type="submit"]{
+	width: 160px;
+	height: 40px;
+	background-color: #308bf5;
+	outline: none;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+}

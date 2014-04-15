@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title Inspired
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "jquery", "jquery_ujs"
+    = javascript_include_tag  'ckeditor/ckeditor.js'
+    %link{href: "http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300", rel: "stylesheet", type: "text/css"}/
+    = csrf_meta_tags
+  %body.page_width
+    = render'shared/header'
+    .posts_header_bunner
+      =image_tag('bunner.png')
+      .bunner_logo
+        =image_tag('bunner-logo.png')
+      .header_h1_bunner
+        %h1 IVANO-FRANKIVSK IT STUDENTS
+    = render'shared/sidebar'
+ 
+    = yield

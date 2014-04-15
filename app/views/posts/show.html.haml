@@ -1,0 +1,21 @@
+.post_show
+  %p#notice= notice
+
+  %p
+    %b 
+    = @post.title
+  %p
+    %b 
+    = raw @post.description
+    - @images.each do |image|
+      = image_tag image.avatar.url(:thumb)
+  %p
+
+  = (@post.created_at + 3.hour).strftime("%d.%m.%y %H:%M")
+
+
+  = render 'comments'
+  .button
+    = link_to 'Редагувати', edit_post_path(@post)
+    \|
+    = link_to 'Назад', posts_path

@@ -1,0 +1,10 @@
+%h1 Editing university
+
+= simple_form_for @university do |f|
+  = f.input :name, label: 'Name'
+
+  = f.button :submit
+
+= link_to 'Show', @university
+\|
+= link_to 'Back', universities_path

@@ -1,0 +1,4 @@
+- @posts.each do |post|
+  .article
+    %h1.article-title= link_to post.title, post
+    %p.article-content=raw post.description

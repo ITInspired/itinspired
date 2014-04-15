@@ -1,0 +1,14 @@
+%html
+  %head
+    %title ITStudents
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "jquery", "jquery_ujs"
+    = javascript_include_tag  'ckeditor/ckeditor.js'
+
+    = csrf_meta_tags
+  %body
+    = render'shared/header'
+    .homes_page_bg
+    = yield
+
+

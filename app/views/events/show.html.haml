@@ -1,0 +1,20 @@
+.post_form  
+  %p#notice= notice
+
+  %p
+    %b 
+    = @event.title
+  %p
+    %b
+    = raw @event.description
+    - @images.each do |image|
+      = image_tag image.avatar.url
+  %p
+
+  = (@event.created_at + 3.hour).strftime("%d.%m.%y %H:%M")
+
+  = render 'comments'
+
+  = link_to 'Редагувати', edit_event_path(@event)
+  \|
+  = link_to 'Назад', events_path

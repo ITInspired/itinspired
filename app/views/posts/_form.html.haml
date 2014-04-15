@@ -1,0 +1,11 @@
+.post_form
+  = simple_form_for @post do |f|
+    = f.input :title, label: 'Title'
+    = f.text_area :description, :class => 'ckeditor'
+    = f.input :interesting, collection: ['News', 'Interesting']
+    = f.simple_fields_for :images do |i|
+      = i.label "Image"
+      = i.file_field :avatar
+
+
+    = f.button :submit
